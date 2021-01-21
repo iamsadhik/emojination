@@ -15,15 +15,15 @@ export default function App() {
   function inputHandler(event) {
     var userInput = event.target.value;
     var meaning = EmojisDictionary[userInput];
-    setemoji(meaning);
-  }
-  function clickHandler(emoji) {
-    var meaning = EmojisDictionary[emoji];
 
     if (meaning === undefined) {
       meaning = "We don't have this in our DB";
     }
 
+    setemoji(meaning);
+  }
+  function clickHandler(emoji) {
+    var meaning = EmojisDictionary[emoji];
     setemoji(meaning);
   }
   return (
