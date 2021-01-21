@@ -19,6 +19,11 @@ export default function App() {
   }
   function clickHandler(emoji) {
     var meaning = EmojisDictionary[emoji];
+
+    if (meaning === undefined) {
+      meaning = "We don't have this in our DB";
+    }
+
     setemoji(meaning);
   }
   return (
